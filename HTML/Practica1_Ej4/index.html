@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #titulo {
+            border-top: 4px solid black;
+            margin-top: 25px;
+            padding-top: 25px;
+            margin-left: 5px;
+        }
+        img {
+            height: 100px;
+            margin-left: 25px;
+        }
+        table {
+            float: left;
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            margin-left: 5px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        caption {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .fecha {
+            text-align: left;
+            letter-spacing: 2px;
+        }
+        td[colspan="2"] {
+            font-weight: bold;
+        }
+        td[rowspan="2"] {
+            width: 50%;
+        }
+        td {
+            width: 50%;
+        }
+        .lista {
+            clear: both; 
+            margin-left: 60px; 
+            padding: 25px;
+        }
+        #form {
+            width: 50%; 
+            max-width: 300px; 
+        }
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .form-group label {
+            width: 30%; 
+            text-align: right;
+            margin-right: 10px; 
+        }
+        .form-group input[type="email"],
+        .form-group input[type="text"] {
+            width: 100%; 
+        }
+        input[type="email"] {
+            height: 30px; 
+            
+        }
+        input[type="text"] {
+            height: 90px; 
+        }
+        .buttons {
+            display: flex;
+            justify-content: flex-end; 
+            margin-top: 10px;
+        }
+        input[type="button"],
+        input[type="reset"] {
+            padding: 10px 20px;
+            margin-left: 10px;
+            font-size: 1.1em; 
+            
+        }
+        .text-container {
+            width: 80%; 
+            max-width: 600px; 
+            margin-left: 25px;
+            box-sizing: border-box;
+            overflow: hidden;
+            
+        }
+        p {
+            margin: 0; 
+            text-align: justify; 
+        }
+        .container {
+            border: 2px solid black; 
+            padding: 20px; 
+            box-sizing: border-box; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <div>
+                <img src="../assets/logoUTN.jpg">
+                <h3></h3>
+            </div>
+            <div>
+                <h1 id="titulo">AÑO 2008</h1>
+                <table>
+                    <tr>
+                        <td colspan="2" align="center" style="font-weight: bold;">Exámenes</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2" class="fecha">Fecha: ..............................................................</td>
+                        <td>Aprobados</td>
+                    </tr>
+                    <tr>
+                        <td>24/30</td>
+                    </tr>
+                </table>
+                
+                <ol class="lista">
+                    <li><a href="#titulo">Enunciado del examen</a></li>
+                    <li><a href="#resolucion" target="_blank">Resolución</a></li>
+                </ol>
+
+                <h4>Puede realizar consultas completando el siguiente formulario:</h4>
+                <form id="form" name="form" action="mailto:x@x.com" method="post" target="_blank">
+                    <div class="form-group">
+                        <label for="email"><b>e-mail: </b></label>
+                        <input type="email" id="email" name="email" />
+                    </div>
+                    <div class="form-group">
+                        <label for="consulta"><b>consulta:</b></label>
+                        <input type="text" id="consulta" name="consulta" />
+                    </div>
+                    <div class="buttons">
+                        <input type="button" value="Enviar" />
+                        <input type="reset" value="Borrar" />
+                    </div>
+                </form>	
+
+                <h2>Enunciado del examen</h2>
+                <div class="text-container">
+                    <p>Ejercicio1:.......................................................................................................................................................................... ..............................................................................................................................................................................................</p>
+                    <p>Ejercicio2:.......................................................................................................................................................................... ..............................................................................................................................................................................................</p>
+                </div>
+                <p>Para mas información dirigirse a <a href="#enunciado">contacto@xx.com</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
