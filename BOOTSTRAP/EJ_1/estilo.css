@@ -1,0 +1,6 @@
+@import url("../node_modules/bootstrap/dist/css/bootstrap.min.css");
+
+.col {
+
+    background-color: rgb(0, 255, 234);
+}

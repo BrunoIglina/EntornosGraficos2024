@@ -1,0 +1,15 @@
+@import url("../node_modules/bootstrap/dist/css/bootstrap.min.css");
+
+#f1 {
+    background-color: rgba(128, 0, 128, 0.2);
+}
+
+#f2 {
+    background-color:moccasin;
+    opacity: 0.6;
+}
+
+#f3 {
+    background-color: salmon;
+    opacity: 0.4;
+}

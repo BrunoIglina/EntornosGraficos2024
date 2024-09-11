@@ -1,0 +1,41 @@
+@import url("../node_modules/bootstrap/dist/css/bootstrap.min.css");
+
+header{
+    padding: 10px;
+    border: .5rem  solid  #fff;
+    background: rgb(166, 125, 167);
+}
+
+.casilla{
+    border:.5rem solid #fff;
+}
+
+.baige{
+    padding:20px;
+    border: .5rem  solid  #fff;
+    background:rgb(245,218,209);
+}
+
+.rosa{
+    padding:20px;
+    border: .5rem  solid  #fff;
+    background:rgb(225,177,175);
+}
+
+.verde{
+    padding:10px;
+    border: .5rem  solid  #fff;
+    background: rgb(104, 204, 131);
+}
+
+.violeta{
+    padding: 10px;
+    border: .5rem  solid  #fff;
+    background:rgb(157,141,152);
+}
+
+.azul{
+    padding:10px;
+    border: .5rem  solid  #fff;
+    background: rgb(124, 158, 203);
+}

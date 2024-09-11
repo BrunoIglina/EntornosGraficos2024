@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row" >
+            <h3>Ejemplo para todas las resoluciones mayores a sm:
+            </h3>
+            <div class="col-12 col-sm" id="f1">
+                Contenido de la primera fila
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-6" id="f2">
+                Contenido de la segunda fila y primera columna
+            </div>
+            <div class="col-12 col-sm-6" id="f3">
+                Contenido de la segunda fila y segunda columna
+            </div>
+        </div>
+
+        <div class="row d-sm-none" >
+            <h3>Ejemplo para resoluciones igual o menores a sm:
+            </h3>
+            <div class="col-12" id="f1">
+                
+            </div>
+        </div>
+        <div class="row d-sm-none">
+            <div class="col-12" id="f2">
+                
+            </div>
+        </div>
+        <div class="row d-sm-none">
+            <div class="col-12" id="f3">
+                Contenido de la tercera fila (pantallas más pequeñas)
+            </div>
+        </div>
+    </div>
+</body>
+</html>
