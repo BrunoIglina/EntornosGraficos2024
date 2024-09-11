@@ -1,0 +1,173 @@
+PUNTO 1
+
+1. ¿ Qué es CSS y para qué se usa?
+CSS, que significa "Cascading Style Sheets" (Hojas de Estilo en Cascada en español), es un lenguaje que se utiliza para diseñar y darle estilo a los documentos web. Mientras que HTML se encarga de la estructura del contenido en una página web, CSS se ocupa de cómo se ve ese contenido.
+2. CSS utiliza reglas para las declaraciones de estilo, ¿cómo funcionan?
+El selector es la parte de la regla que especifica qué elementos HTML deben recibir el estilo. Por ejemplo, puedes usar selectores para aplicar estilos a etiquetas HTML específicas, clases, identificadores u otros atributos. Aquí tienes algunos ejemplos:
+Elementos HTML: p, h1, div
+Clases: .mi-clase (aplica estilos a todos los elementos con la clase mi-clase)
+Identificadores: #mi-id (aplica estilos al elemento con el identificador mi-id)
+Atributos: [type="text"] (aplica estilos a los elementos con el atributo type igual a text)
+Las declaraciones son las instrucciones de estilo que se aplican a los elementos seleccionados. Cada declaración se compone de una propiedad y un valor. Las propiedades definen qué aspecto tendrá el elemento, y los valores especifican el estilo deseado.
+Una declaración tiene el formato:
+propiedad: valor;
+
+3. ¿ Cuáles son las tres formas de dar estilo a un documento?
+Los estilos en CSS se pueden aplicar de tres maneras principales: en línea (directamente en el atributo style de un elemento HTML), internos (dentro de la etiqueta <style> en la sección <head> del documento HTML), y externos (mediante un archivo CSS separado enlazado con la etiqueta <link> en la sección <head>).
+4. ¿ Cuáles son los distintos tipos de selectores más utilizados?
+Ejemplifique cada uno.
+
+Selector de elemento (o tipo)
+Aplica estilos a todos los elementos de un tipo específico.
+p {
+  color: blue;
+}
+
+Selector de clase
+
+Aplica estilos a todos los elementos que tienen una clase específica. Se denota con un punto (.) seguido del nombre de la clase.
+.mi-clase {
+  font-size: 18px;
+}
+Selector de identificador
+Aplica estilos a un único elemento con un identificador específico. Se denota con una almohadilla (#) seguida del nombre del identificador.
+#mi-id {
+  background-color: yellow;
+}
+
+
+5. ¿ Qué es una pseudo-clase? Cuáles son las más utilizadas aplicadas a vínculos?
+
+Las pseudo-clases en CSS son palabras clave que se añaden a selectores y que especifican un estado especial del elemento seleccionado. Estos estados pueden ser dinámicos, como :hover para cuando el cursor está sobre un elemento, o :focus para cuando un elemento tiene el foco de entrada, entre otros.
+Las más utilizadas aplicadas a vínculos son:
+:link: Se aplica a los enlaces que aún no han sido visitados. Define el estilo para los enlaces sin clics previos.
+:visited: Se aplica a los enlaces que ya han sido visitados por el usuario. Diferencia visualmente los enlaces que ya han sido clicados.
+:hover: Se activa cuando el usuario coloca el cursor sobre el enlace. Cambia el estilo del enlace durante la interacción.
+:active: Se aplica cuando el enlace está siendo activado, como cuando el usuario hace clic en él. Define cómo se verá el enlace mientras se presiona.
+:focus: Se aplica cuando el enlace tiene el foco, generalmente cuando es seleccionado mediante el teclado. Permite estilos específicos para este estado.
+
+6. ¿ Qué es la herencia?
+La herencia es el proceso por el cual algunas propiedades CSS aplicadas a una etiqueta se pasan a las etiquetas anidadas.
+Si un elemento no tiene un valor en cascada para una determinada propiedad, puede heredar uno de un elemento antecesor. Es común aplicar la propiedad font-family al elemento <body>. Todas las etiquetas descendientes de la etiqueta <body>, es decir, las que están dentro de la etiqueta <body> heredarán esta fuente y no es necesario aplicarla explícitamente a cada elemento de la página.
+
+
+7. ¿ En qué consiste el proceso denominado cascada?
+
+El proceso de cascada determina cuál de las múltiples reglas aplicadas a un elemento debe prevalecer, teniendo en cuenta el origen del estilo, la especificidad de los selectores, la importancia (!important) y el orden en que se escriben las reglas. Esto permite a los diseñadores web escribir estilos que puedan ser fácilmente sobreescritos o priorizados según sea necesario.
+
+
+PUNTO 2
+
+Primero hay que empezar aclarando lo siguiente, en CSS, el símbolo # se utiliza para seleccionar un elemento HTML por su atributo id. Cada elemento HTML puede tener un atributo id único, y el # seguido del valor de este id permite aplicar estilos específicos a ese elemento.
+
+p#normal { 
+font-family: arial,helvetica; 
+font-size: 11px; 
+font-weight: bold; 
+}
+El p#normal es el selector que apunta a un párrafo con el id “normal” aunque poner el p delante del símbolo numeral, no es necesario.
+font-family como su nombre lo indica, es la familia de fuentes que tendrá el párrafo, si arial no se encuentra disponible se pasará a helvetica.
+font-size establece el tamaño de la fuente que tenga el párrafo, en este caso de 11 pixeles
+font-weight convierte el texto del párrafo en negrita.
+
+*#destacado { 
+border-style: solid; 
+border-color: blue; 
+border-width: 2px; 
+}
+En *#destacado indica que se les va a aplicar estilo a TODOS los elementos que tengan el id “destacado”.
+border-style establece el estilo del borde como su nombre lo indica, en este caso el “solid” indica que el borde del elemento tiene que ser de línea continua.
+border-color como su nombre lo indica, establece el color del borde del elemento, en este caso de color azul.
+border-width define el grosor del borde del elemento, en nuestro caso aplica un grosor de 2px.
+
+
+#distinto { 
+background-color: #9EC7EB; 
+color: red;
+}
+
+Como se ha mencionado antes, no hace falta referenciar el “p” delante del símbolo numeral.
+En este caso se hace referencia al párrafo de nuestro código que posee el id “distinto”.
+
+background-color: #9EC7EB establece el color de fondo de un elemento, en nuestro caso del párrafo, y en este caso está expresado en hexadecimal.
+color: red establece el color de un TEXTO, en este caso del texto del párrafo.
+
+<p id="normal">Este es un párrafo</p>
+Declaración de un párrafo con un id “normal”, con texto “Este es un párrafo”
+<p id="destacado">Este es otro párrafo</p>
+Declaración de un párrafo con un id “destacado”, con texto “Este es otro párrafo”
+<table id="destacado"><tr><td>Esta es una tabla</td></tr></table>
+Declaración de una tabla con una única celda que contiene el texto “Esta es una tabla”, con un id “destacado”
+<p id="distinto">Este es el último párrafo</p>
+Declaración de un párrafo con un id “distinto”, con texto “Este es el último párrafo”
+
+
+
+
+PUNTO 3
+Primero hay que empezar aclarando lo siguiente, en CSS, el símbolo . se utiliza para seleccionar un elemento HTML por su atributo class. A diferencia del id, que debe ser único para cada elemento, una class puede ser compartida por múltiples elementos, permitiendo aplicar el mismo estilo a varios elementos al mismo tiempo.
+p.quitar { 
+color: red; 
+}
+El p.quitar es el selector que apunta a un párrafo con la clase “quitar”. Acá si puede ser necesario aclarar el p antes del punto, para especificar a qué tipo de elemento con esa clase le quiero aplicar el estilo..
+Entonces se les aplicará el estilo a todos los párrafos con class = “quitar”, en este caso se les aplica un color de texto rojo.
+
+*.desarrollo { 
+font-size: 8px; 
+}
+En *.desarrollo indica que se les va a aplicar estilo a TODOS los elementos que tengan la clase “desarrollo”, en nuestro caso a todos los elementos se le aplicará un tamaño de fuente de 8 pixeles.
+
+.importante { 
+font-size: 20px; 
+}
+
+Indica que a todos los elementos que tengan la clase “importante” se les aplicará el estilo, entonces podemos llegar a la conclusión de que poner el * y no ponerlo, es lo mismo.
+En este caso a todos los elementos que tengan la clase “importante” se les aplicará un tamaño de fuente de 20 pixeles, en nuestro html hay solo un párrafo con esa clase, por lo que el estilo se aplicará sobre él.
+
+
+
+
+
+
+<p class="desarrollo">
+En este primer párrafo trataremos lo siguiente:
+<br />xxxxxxxxxxxxxxxxxxxxxxxxx
+</p>
+Declaración de un párrafo con clase “desarrollo”, que contiene el texto “En este primer párrafo trataremos lo siguiente”, luego un salto línea, y por último el texto “xxxxxxxxxxxxxxxxxxxxxxxxx”
+<p >
+En este otro párrafo trataremos otro tema:<br />
+xxxxxxxxxxxxxxxxxxxxxxxxx
+</p>
+La misma idea que el párrafo anterior, solo que este no posee clase.
+<p class="importante">
+Y este es el párrafo más importante de la obra…
+<br />xxxxxxxxxxxxxxxxxxxxxxxxx
+</ p>
+Declaración de un párrafo con clase “importante”, que contiene el texto “Y este es el párrafo más importante de la obra…”, luego un salto línea, y por último el texto “xxxxxxxxxxxxxxxxxxxxxxxxx”
+<h1 class="quitar">Este encabezado también debe ser quitado de la obra</h1>
+Declaración de un encabezado de nivel 1, con clase “quitar” que contiene el texto “Este encabezado también debe ser quitado de la obra”.
+<p class="quitar importante">Se pueden aplicar varias clases a la vez</p>
+Declaración de un párrafo, con clase “quitar” que contiene el texto “Se pueden aplicar varias clases a la vez”.
+
+
+PUNTO 4
+Comparación
+Ubicación de la clase contenido:
+Código 1: La clase contenido se aplica solo al párrafo (<p>), lo que permite estilizar únicamente ese elemento específico con la clase. Además, usa un estilo en línea (style="font-weight: normal;") para definir el peso de la fuente.
+Código 2: La clase contenido se aplica al elemento <body>, lo que significa que todos los elementos dentro del <body> (el párrafo, la tabla, etc.) pueden ser afectados por los estilos definidos para la clase contenido.
+Alcance de los estilos:
+Código 1: Solo el párrafo con la clase contenido puede recibir estilos asociados a esa clase. El estilo en línea (font-weight: normal;) se aplica exclusivamente a ese párrafo.
+Código 2: Todos los elementos dentro del <body> pueden heredar estilos de la clase contenido. Por ejemplo, si en CSS se define .contenido { font-family: Arial; }, todos los elementos dentro del <body> 
+Estilo en línea vs clase:
+Código 1: Usa un estilo en línea (style="font-weight: normal;") en el párrafo, lo que hace que ese estilo específico sea difícil de sobrescribir o cambiar sin editar directamente el HTML. Además, solo se estiliza el peso de la fuente en el párrafo.
+Código 2: No tiene estilos en línea, lo que facilita el mantenimiento y la modificación de estilos a través de un archivo CSS externo o una hoja de estilo interna.usarán la fuente Arial.
+La elección entre los dos depende de si necesitas estilos específicos para un solo elemento (como en el Código 1) o si deseas un estilo uniforme para todo el contenido de la página (como en el Código 2).
+
+
+
+
+
+
+PUNTO 7
+Link: https://drive.google.com/file/d/1APd6BaVZh4p3oWi1DAEIFmqeYGrQSM48/view?usp=drive_link
+Integrantes: Iglina Bruno 49623, Marini Luciano 50221
