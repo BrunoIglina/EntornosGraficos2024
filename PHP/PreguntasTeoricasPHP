@@ -1,0 +1,184 @@
+PRACTICA INTRODUCTORIA PHP
+Ejercicio 1)
+Las variables y su tipo:
+$a: Tipo: booleano (bool), Valor inicial: TRUE.
+$b: Tipo: cadena (string) ,Valor: "xyz".
+$c: Tipo: cadena (string), Valor: 'xyz'. Aunque está usando comillas simples, sigue siendo una cadena.
+$d:Tipo: entero (int), Valor inicial: 12.
+$f: Tipo: entero (int), Se asigna más adelante en el código con el valor retornado por la función doble($d++).
+$g: Tipo: entero (int), Se asigna más adelante con el valor de $f después de incrementarlo en 10 ($f += 10).
+ 
+Los operadores: 
+Operador ternario: ? :
+Operadores de incremento: ++ (pre-incremento y post-incremento)
+Operador de multiplicación: *
+Operador de asignación: =
+Operador de suma y asignación: +=
+Operador de concatenación en echo: ,
+ 
+Las funciones y sus parámetros:
+doble($i), gettype($variable), is_int($variable), is_string($variable).
+Las estructuras de control:
+Condicionales if: Se utilizan dos if para verificar condiciones:
+Si $d es un entero, incrementa $d en 4.
+Si $a es una cadena, imprime un mensaje. (En este caso, no se ejecuta porque $a es un booleano).
+
+Cuál es la salida por pantalla:booleanstringstringinteger1xyzxyz184444
+
+
+
+
+
+
+
+
+
+Ejercicio 2)
+
+a)
+
+Estos 3 códigos son equivalentes, ya que cada uno imprime lo mismo solo que mediante una metodología diferente. La diferencia reside únicamente en la forma en que se estructuran los bucles y el manejo del incremento de $i.
+
+b)	
+
+
+Los cuatro fragmentos de código son equivalentes. Todos imprimen los números del 1 al 10, aunque lo hacen utilizando diferentes enfoques en el uso del bucle for
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+c)
+
+
+
+Son equivalentes porque ambos códigos comparan el valor de la variable $i contra los mismos valores (0, 1 y 2) y, según la coincidencia, imprimen un mensaje específico. Tanto el if-elseif como el switch ejecutan una sola rama correspondiente al valor de $i. La salida será la misma para los mismos valores de $i.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3)
+a)
+
+Este código genera una tabla HTML de 5 filas y 2 columnas, donde cada celda está vacía. Sirve como un ejemplo básico de cómo crear una tabla con un bucle for en PHP. Se puede modificar para añadir contenido en las celdas o cambiar el número de filas y columnas fácilmente.
+b)
+
+Este código PHP, embebido en una página HTML, presenta un formulario que permite a los usuarios ingresar su edad y luego determina si son mayores o menores de edad.
+
+
+4)
+
+Antes de incluir datos.php, las variables $flor y $color no están definidas, por lo que no se imprimen valores.
+
+Después de incluir datos.php, las variables se definen, y el segundo echo utiliza estos valores definidos.
+
+5)
+La salida por pantalla refleja que el archivo php se ejecuta el visitas.php y llama a contador.php que utiliza el archivo de texto que se incrementa el contador y se muestra por pantalla.
+
+PHP: arrays, funciones 
+Ejercicio 1: Indicar si los siguientes códigos son equivalentes.
+
+Ambos códigos son funcionalmente iguales. En el primer código, el array se crea con todos los valores y claves en una sola declaración usando array(). En el segundo código, las claves se asignan una por una, y el número 4 se agrega al final usando $a[] = 4;. Aunque las sintaxis son diferentes, el resultado es un array idéntico con las mismas claves y valores.
+
+Ejercicio 2: En cada caso, indicar las salidas correspondientes: 
+Primer código: define un array simple y muestra dos valores.
+Segundo código: define un array multidimensional y muestra tres valores.
+Tercer código: manipula un array agregando, modificando y eliminando elementos, y luego lo borra.
+Ejercicio 3: En cada caso, indicar las salidas correspondientes:
+Código 1: Imprime "bar1". Muestra el valor "bar" asociado a la clave "x" y el valor 1 correspondiente a true.
+
+Código 2: Imprime 5942. Accede a un array multidimensional y muestra los valores 5, 9 y 42.
+
+Código 3: No imprime nada. El array es modificado, pero finalmente se elimina con unset($matriz).
+
+Código 4: No tiene salida, solo se declara un array.
+
+Código 5: No tiene salida, simplemente asigna valores al array.
+
+Código 6 (a): Imprime la fecha y hora actual en formato similar a:
+"Has entrado en esta pagina a las 14 horas, con 30 minutos y 45 segundos, del 19/9/2024".
+
+Código 7 (b): Imprime 5 + 6 = 11. Suma dos números e imprime el resultado.
+
+Ejercicio 3
+
+Primer código: Imprime "bar1", donde "bar" es el valor asociado a la clave "x" y 1 es la representación de true.
+Segundo código: Imprime 5942, mostrando los valores del array multidimensional: 5, 9 y 42.
+Tercer código: No imprime nada, ya que el array es modificado, pero luego se elimina completamente con unset().
+Cuarto código: No tiene salida, solo declara un array sin ninguna instrucción de impresión.
+Quinto código: No tiene salida, asigna valores al array, pero no los imprime.
+Sexto código: Imprime la hora y fecha actual con un formato específico, como:
+"Has entrado en esta pagina a las 14 horas, con 30 minutos y 45 segundos, del 19/9/2024".
+Séptimo código: Imprime "5 + 6 = 11", resultado de sumar los dos números pasados a la función
+
+Ejercicio 4: Analizar la siguiente función, y escribir un script para probar su funcionamiento:
+<?php
+function comprobar_nombre_usuario($nombre_usuario){
+    // Compruebo que el tamaño del string sea válido
+    if (strlen($nombre_usuario) < 3 || strlen($nombre_usuario) > 20){
+        echo $nombre_usuario . " no es válido<br>";
+        return false;
+    }
+
+    // Compruebo que los caracteres sean los permitidos
+    $permitidos = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_";
+    for ($i = 0; $i < strlen($nombre_usuario); $i++){
+        if (strpos($permitidos, substr($nombre_usuario, $i, 1)) === false){
+            echo $nombre_usuario . " no es válido<br>";
+            return false;
+        }
+    }
+
+    echo $nombre_usuario . " es válido<br>";
+    return true;
+}
+
+
+$usuarios = [
+    "Juan23",
+    "Ana_Maria",
+    "Luis$32",
+    "a",
+    "NombreMuyLargoQueNoDebeSerValido",
+    "Correcto123",
+    "Invalido#Char",
+    "12345",
+    "user-name",
+    "OK_user"
+];
+
+
+foreach ($usuarios as $usuario) {
+    comprobar_nombre_usuario($usuario);
+}
+?>
