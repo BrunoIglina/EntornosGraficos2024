@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title><b>Formulario Alta Ciudad</b></title>
+</head>
+<body>
+    <form action="Alta.php" method="POST" name="FormAlta">
+        <table width="300">
+            <tr>
+                <td>Ciudad o Pueblo:</td>
+                <td><input type="text" name="ciudad" size="20" maxlength="40" required></td>
+            </tr>
+            <tr>
+                <td>Pais:</td>
+                <td><input type="text" name="pais" size="20" maxlength="40" required></td>
+            </tr>
+            <tr>
+                <td>Habitantes:</td>
+                <td><input type="number" name="habitantes" size="20" required></td>
+            </tr>
+            <tr>
+                <td>Superficie:</td>
+                <td><input type="number" name="superficie" size="20" required></td>
+            </tr>
+            <tr>
+                <td>¿Tiene Tren?:</td>
+                <td>
+                    <select name="tieneMetro" required>
+                        <option value="1">Si</option>
+                        <option value="0">No</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" name="Submit" value="Agregar">
+                    <p><a href="Menu.html"><b>Volver al menu</b></a></p>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
